@@ -1,125 +1,108 @@
 /** @jsx jsx */
-import { jsx, useColorMode } from "theme-ui";
-import { Helmet } from "react-helmet";
-import Divider from "../elements/divider";
-import Inner from "../elements/inner";
-import Content from "../elements/content";
-import Svg from "./svg";
-import { UpDown, UpDownWide } from "../styles/animations";
+import { jsx, useColorMode } from "theme-ui"
+import { Helmet } from "react-helmet"
+import Divider from "../elements/divider"
+import Inner from "../elements/inner"
+import Content from "../elements/content"
+import Svg from "./svg"
+import { UpDown, UpDownWide } from "../styles/animations"
+import { FaSun } from "@react-icons/all-files/fa/FaSun"
+import { FaMoon } from "@react-icons/all-files/fa/FaMoon"
+
 // @ts-ignore
-import Intro from "../sections/intro";
-import "../styles/github.css";
+import Intro from "../sections/intro"
+import "../styles/github.css"
 
 const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
-  const [colorMode, setColorMode] = useColorMode();
-  const isDark = colorMode === `dark`;
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === `dark`
+  const toggleColorMode = (e: any) => {
+    setColorMode(isDark ? `light` : `dark`)
+  }
 
-  console.log({ isDark });
+  console.log({ isDark })
 
   return (
     <div>
+      <div className="top">
+        <button
+          sx={{
+            position: "relative",
+            zIndex: 9999,
+            variant: `buttons.toggle`,
+            fontWeight: `semibold`,
+            display: `block`,
+            mx: `auto`,
+            mb: 3,
+          }}
+          onClick={toggleColorMode}
+          type="button"
+          aria-label="Toggle dark mode"
+        >
+          {isDark ? (
+            <span
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+              }}
+            >
+              Light <FaSun />
+            </span>
+          ) : (
+            <span
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+              }}
+            >
+              Dark <FaMoon />
+            </span>
+          )}
+        </button>
+      </div>
       <Divider speed={0.2} offset={offset} factor={factor}>
         <UpDown>
-          <Svg
-            icon="triangle"
-            hiddenMobile
-            width={48}
-            stroke
-            color="icon_orange"
-            left="10%"
-            top="20%"
-          />
-          <Svg
-            icon="hexa"
-            width={48}
-            stroke
-            color="icon_red"
-            left="60%"
-            top="70%"
-          />
-          <Svg icon="box" width={6} color="icon_darker" left="60%" top="15%" />
+          <Svg icon="gatsby" width={20} left="10%" top="20%" />
+          <Svg icon="express" width={24} left="60%" top="70%" />
+          <Svg icon="mui" width={6} color="icon_darker" left="60%" top="15%" />
         </UpDown>
         <UpDownWide>
           <Svg
-            icon="arrowUp"
+            icon="vue"
             hiddenMobile
             width={16}
-            color="icon_blue"
             left="80%"
             top="10%"
           />
+          <Svg icon="ts" width={12} left="90%" top="50%" />
+          <Svg icon="nodejs" width={48} left="70%" top="90%" />
+          <Svg icon="html" hiddenMobile width={8} left="30%" top="65%" />
+          <Svg icon="css" hiddenMobile width={8} left="28%" top="15%" />
           <Svg
-            icon="triangle"
-            width={12}
-            stroke
-            color="icon_brightest"
-            left="90%"
-            top="50%"
-          />
-          <Svg
-            icon="circle"
-            width={16}
-            color="icon_darker"
-            left="70%"
-            top="90%"
-          />
-          <Svg
-            icon="triangle"
-            width={16}
-            stroke
-            color="icon_darkest"
-            left="30%"
-            top="65%"
-          />
-          <Svg
-            icon="cross"
-            width={16}
-            stroke
-            color="icon_pink"
-            left="28%"
-            top="15%"
-          />
-          <Svg
-            icon="circle"
+            icon="git"
+            hiddenMobile
             width={6}
             color="icon_darkest"
             left="75%"
             top="10%"
           />
-          <Svg
-            icon="upDown"
-            hiddenMobile
-            width={8}
-            color="icon_darkest"
-            left="45%"
-            top="10%"
-          />
+          <Svg icon="jest" hiddenMobile width={16} left="45%" top="10%" />
         </UpDownWide>
         <Svg
-          icon="circle"
+          icon="mongo"
           hiddenMobile
-          width={24}
+          width={16}
           color="icon_darker"
           left="5%"
           top="70%"
         />
-        <Svg icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />
+        <Svg icon="antd" width={8} color="icon_darkest" left="4%" top="20%" />
+        <Svg icon="js" width={46} color="icon_darkest" left="50%" top="60%" />
+        <Svg icon="d3" width={12} color="icon_darkest" left="95%" top="90%" />
         <Svg
-          icon="circle"
-          width={12}
-          color="icon_darkest"
-          left="50%"
-          top="60%"
-        />
-        <Svg
-          icon="upDown"
-          width={8}
-          color="icon_darkest"
-          left="95%"
-          top="90%"
-        />
-        <Svg
-          icon="upDown"
+          icon="jq"
           hiddenMobile
           width={24}
           color="icon_darker"
@@ -127,34 +110,41 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
           top="80%"
         />
         <Svg
-          icon="triangle"
-          width={8}
+          icon="docker"
+          width={16}
           stroke
           color="icon_darker"
           left="25%"
           top="5%"
         />
-        <Svg icon="circle" width={64} color="icon_green" left="95%" top="5%" />
         <Svg
-          icon="box"
+          icon="sb"
+          hiddenMobile
+          width={50}
+          color="icon_green"
+          left="75%"
+          top="-2%"
+        />
+        <Svg
+          icon="reactjs"
           hiddenMobile
           width={64}
           color="icon_purple"
           left="5%"
           top="90%"
         />
-        <Svg icon="box" width={6} color="icon_darkest" left="10%" top="10%" />
-        <Svg icon="box" width={12} color="icon_darkest" left="40%" top="30%" />
+        <Svg icon="php" width={12} color="icon_darkest" left="10%" top="10%" />
+        <Svg icon="linux" width={12} color="icon_darkest" left="40%" top="30%" />
         <Svg
-          icon="hexa"
-          width={16}
+          icon="codeigniter"
+          width={8}
           stroke
           color="icon_darker"
           left="10%"
           top="50%"
         />
         <Svg
-          icon="hexa"
+          icon="bootstrap"
           width={8}
           stroke
           color="icon_darker"
@@ -229,7 +219,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
         </Inner>
       </Content>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
