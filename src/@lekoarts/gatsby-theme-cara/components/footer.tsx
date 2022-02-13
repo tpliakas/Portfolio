@@ -11,7 +11,13 @@ const Footer = () => {
   return (
     <Box as="footer" variant="footer">
       <button
-        sx={{ variant: `buttons.toggle`, fontWeight: `semibold`, display: `block`, mx: `auto`, mb: 3 }}
+        sx={{
+          variant: `buttons.toggle`,
+          fontWeight: `semibold`,
+          display: `block`,
+          mx: `auto`,
+          mb: 3,
+        }}
         onClick={toggleColorMode}
         type="button"
         aria-label="Toggle dark mode"
@@ -31,9 +37,19 @@ const Footer = () => {
         }}
       >
         {isDark ? (
-          <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_v2-light_w30.png" alt="LekoArts Logo" />
+          <img
+            width="30"
+            height="30"
+            src="https://img.lekoarts.de/gatsby/logo_v2-light_w30.png"
+            alt="LekoArts Logo"
+          />
         ) : (
-          <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_v2_w30.png" alt="LekoArts Logo" />
+          <img
+            width="30"
+            height="30"
+            src="https://img.lekoarts.de/gatsby/logo_v2_w30.png"
+            alt="LekoArts Logo"
+          />
         )}
         {` `}
         <Link

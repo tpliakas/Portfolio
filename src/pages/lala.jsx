@@ -1,17 +1,17 @@
-import * as React from "react";
-import { Link } from "gatsby";
-import { Parallax } from "@react-spring/parallax";
-import { Themed } from "theme-ui";
-import Layout from "@lekoarts/gatsby-theme-cara/src/components/layout";
-import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider";
+import * as React from "react"
+import { Link } from "gatsby"
+import { Parallax } from "@react-spring/parallax"
+import { Themed } from "theme-ui"
+import Layout from "@lekoarts/gatsby-theme-cara/src/components/layout"
+import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider"
 import {
   UpDown,
   UpDownWide,
-} from "@lekoarts/gatsby-theme-cara/src/styles/animations";
-import Svg from "@lekoarts/gatsby-theme-cara/src/components/svg";
-import Seo from "@lekoarts/gatsby-theme-cara/src/components/seo";
-import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
-import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
+} from "@lekoarts/gatsby-theme-cara/src/styles/animations"
+import Svg from "@lekoarts/gatsby-theme-cara/src/components/svg"
+import Seo from "@lekoarts/gatsby-theme-cara/src/components/seo"
+import Content from "@lekoarts/gatsby-theme-cara/src/elements/content"
+import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner"
 
 const NotFound = () => (
   <Layout>
@@ -37,13 +37,7 @@ const NotFound = () => (
               left="60%"
               top="70%"
             />
-            <Svg
-              icon="box"
-              width={6}
-              color="icon_darker"
-              left="60%"
-              top="15%"
-            />
+            <Svg icon="box" width={6} color="icon_darker" left="60%" top="15%" />
           </UpDown>
           <UpDownWide>
             <Svg
@@ -62,13 +56,7 @@ const NotFound = () => (
               left="90%"
               top="50%"
             />
-            <Svg
-              icon="circle"
-              width={16}
-              color="icon_darker"
-              left="70%"
-              top="90%"
-            />
+            <Svg icon="circle" width={16} color="icon_darker" left="70%" top="90%" />
             <Svg
               icon="triangle"
               width={16}
@@ -85,13 +73,7 @@ const NotFound = () => (
               left="28%"
               top="15%"
             />
-            <Svg
-              icon="circle"
-              width={6}
-              color="icon_darkest"
-              left="75%"
-              top="10%"
-            />
+            <Svg icon="circle" width={6} color="icon_darkest" left="75%" top="10%" />
             <Svg
               icon="upDown"
               hiddenMobile
@@ -109,27 +91,9 @@ const NotFound = () => (
             left="5%"
             top="70%"
           />
-          <Svg
-            icon="circle"
-            width={6}
-            color="icon_darkest"
-            left="4%"
-            top="20%"
-          />
-          <Svg
-            icon="circle"
-            width={12}
-            color="icon_darkest"
-            left="50%"
-            top="60%"
-          />
-          <Svg
-            icon="upDown"
-            width={8}
-            color="icon_darkest"
-            left="95%"
-            top="90%"
-          />
+          <Svg icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />
+          <Svg icon="circle" width={12} color="icon_darkest" left="50%" top="60%" />
+          <Svg icon="upDown" width={8} color="icon_darkest" left="95%" top="90%" />
           <Svg
             icon="upDown"
             hiddenMobile
@@ -146,13 +110,7 @@ const NotFound = () => (
             left="25%"
             top="5%"
           />
-          <Svg
-            icon="circle"
-            width={64}
-            color="icon_green"
-            left="95%"
-            top="5%"
-          />
+          <Svg icon="circle" width={64} color="icon_green" left="95%" top="5%" />
           <Svg
             icon="box"
             hiddenMobile
@@ -162,13 +120,7 @@ const NotFound = () => (
             top="90%"
           />
           <Svg icon="box" width={6} color="icon_darkest" left="10%" top="10%" />
-          <Svg
-            icon="box"
-            width={12}
-            color="icon_darkest"
-            left="40%"
-            top="30%"
-          />
+          <Svg icon="box" width={12} color="icon_darkest" left="40%" top="30%" />
           <Svg
             icon="hexa"
             width={16}
@@ -186,12 +138,7 @@ const NotFound = () => (
             top="70%"
           />
         </Divider>
-        <Content
-          sx={{ variant: `texts.bigger` }}
-          speed={0.4}
-          offset={0}
-          factor={1}
-        >
+        <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={0} factor={1}>
           <Inner>
             <Themed.h1>4LALA</Themed.h1>
             <Themed.p>
@@ -202,6 +149,6 @@ const NotFound = () => (
       </div>
     </Parallax>
   </Layout>
-);
+)
 
-export default NotFound;
+export default NotFound

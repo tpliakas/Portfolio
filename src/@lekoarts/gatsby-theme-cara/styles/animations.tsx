@@ -74,4 +74,5 @@ export function UpDownWide({ children }: { children: React.ReactNode }) {
   )
 }
 
-export const waveAnimation = (length: string) => `${wave} ${length} linear infinite alternate`
+export const waveAnimation = (length: string) =>
+  `${wave} ${length} linear infinite alternate`
