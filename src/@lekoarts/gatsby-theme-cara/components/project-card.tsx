@@ -22,6 +22,9 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
             rel="noreferrer noopener"
             sx={{
                 width: `100%`,
+                maxWidth: 700,
+                margin: `auto`,
+                maxHeight: 250,
                 boxShadow: `lg`,
                 position: `relative`,
                 textDecoration: `none`,
@@ -29,7 +32,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
                 px: 4,
                 py: [4, 5],
                 color: `white`,
-                backgroundImage: `url(${imageLink})` || `none`,
+                background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${imageLink})` || `none`,
                 transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
                 "&:hover": {
                     color: `white !important`,
@@ -41,11 +44,8 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
             <div sx={{opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`}}>
                 {children}
             </div>
-            {/*<img src={image} />*/}
-            {/*{image}*/}
             <div
                 sx={{
-                    textTransform: `uppercase`,
                     letterSpacing: `wide`,
                     pt: 4,
                     fontSize: [4, 5],

@@ -15,8 +15,10 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@babel/runtime": "^7.18.9",
     "@lekoarts/gatsby-theme-cara": "^3.0.0",
     "@react-icons/all-files": "^4.1.0",
+    "antd": "^4.22.3",
     "gatsby": "^4.4.0",
     "gatsby-plugin-gatsby-cloud": "^4.0.0",
     "gatsby-plugin-manifest": "^4.0.0",
