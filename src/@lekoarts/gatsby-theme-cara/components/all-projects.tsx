@@ -1,5 +1,3 @@
 /** @jsx jsx */
 
-const AllProjects = () => {
-
-}
+const AllProjects = () => {}
