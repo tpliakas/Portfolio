@@ -671,6 +671,7 @@ const Svg = ({
       stroke: stroke ? `currentColor` : `none`,
       fill: stroke ? `none` : `currentColor`,
       display: hiddenMobile ? hidden : `block`,
+      opacity: '0.4',
       color,
       width,
       left,
