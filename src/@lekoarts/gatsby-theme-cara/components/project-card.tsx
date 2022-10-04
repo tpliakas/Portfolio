@@ -8,17 +8,23 @@ type ProjectCardProps = {
   bg: string
 }
 
-const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) =>
-    <a href={link} target="_blank" rel="noreferrer noopener" sx={{
-        width: "100%",
-        minWidth: 300,
-        maxWidth: 600,
-        margin: " 0 auto"
-    }}>
-        <figure className="text-hover-img">
-            <img src={bg} alt="A small fluffy dog"/>
-            {children}
-        </figure>
-    </a>
+const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
+  <a
+    href={link}
+    target="_blank"
+    rel="noreferrer noopener"
+    sx={{
+      width: "100%",
+      minWidth: 300,
+      maxWidth: 600,
+      margin: " 0 auto",
+    }}
+  >
+    <figure className="text-hover-img">
+      <img src={bg} alt="A small fluffy dog" />
+      {children}
+    </figure>
+  </a>
+)
 
 export default ProjectCard

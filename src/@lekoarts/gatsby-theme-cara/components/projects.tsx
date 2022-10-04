@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { useState } from "react"
-import Modal from 'react-bootstrap/Modal';
+import Modal from "react-bootstrap/Modal"
 
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
@@ -13,8 +13,6 @@ import ProjectsMDX from "../sections/projects"
 // @ts-ignore
 import AllProjectsMDX from "../sections/all-projects"
 import "../styles/projects.css"
-
-
 
 const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) => {
   const [isModalVisible, setIsModalVisible] = useState(false)
@@ -49,7 +47,9 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
             <ProjectsMDX />
           </div>
         </Inner>
-        <button className="check-more" onClick={showModal}>Check more projects!</button>
+        <button className="check-more" onClick={showModal}>
+          Check more projects!
+        </button>
       </Content>
       <Divider speed={0.1} offset={offset} factor={factor}>
         <UpDown>
@@ -125,9 +125,13 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
       </Divider>
       <Modal show={isModalVisible} onHide={hideModal} fullscreen>
         <Modal.Header closeButton>
-         <h2 sx={{
-             fontWeight: 700
-         }}>Projects</h2>
+          <h2
+            sx={{
+              fontWeight: 700,
+            }}
+          >
+            Projects
+          </h2>
         </Modal.Header>
         <Modal.Body>
           <div
