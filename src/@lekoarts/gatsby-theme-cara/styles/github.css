@@ -51,4 +51,6 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
+  margin-top: 5px;
+  list-style-type: none;
 }
