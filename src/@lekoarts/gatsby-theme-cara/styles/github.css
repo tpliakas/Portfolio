@@ -43,3 +43,12 @@
     animation: octocat-wave 560ms ease-in-out;
   }
 }
+
+/* Non-github css */
+.menu-ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
