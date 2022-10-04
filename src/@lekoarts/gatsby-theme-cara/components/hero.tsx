@@ -20,47 +20,60 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
     setColorMode(isDark ? `light` : `dark`)
   }
 
-  console.log({ isDark })
-
   return (
     <div>
       <div className="top">
-        <button
-          sx={{
-            position: "relative",
-            zIndex: 9999,
-            variant: `buttons.toggle`,
-            fontWeight: `semibold`,
-            display: `block`,
-            mx: `auto`,
-            mb: 3,
-          }}
-          onClick={toggleColorMode}
-          type="button"
-          aria-label="Toggle dark mode"
-        >
-          {isDark ? (
-            <span
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-              }}
-            >
-              Light <FaSun />
-            </span>
-          ) : (
-            <span
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-              }}
-            >
-              Dark <FaMoon />
-            </span>
-          )}
-        </button>
+        <nav>
+          <ul className="menu-ul">
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <button
+                sx={{
+                  position: "relative",
+                  zIndex: 9999,
+                  variant: `buttons.toggle`,
+                  fontWeight: `semibold`,
+                  display: `block`,
+                  mx: `auto`,
+                  borderRadius: 3,
+                }}
+                onClick={toggleColorMode}
+                type="button"
+                aria-label="Toggle dark mode"
+              >
+                {isDark ? (
+                  <span
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                    }}
+                  >
+                    Light <FaSun />
+                  </span>
+                ) : (
+                  <span
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                    }}
+                  >
+                    Dark <FaMoon />
+                  </span>
+                )}
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
       <Divider speed={0.2} offset={offset} factor={factor}>
         <UpDown>
