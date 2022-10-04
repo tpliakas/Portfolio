@@ -1,14 +1,20 @@
-.projects .ant-btn-primary:hover {
-    background: rgba(255,255,255, 0.75) !important;
-    border-color: rgba(255,255,255, 0.75) !important;
+.check-more {
+  margin-top: 5em;
+  font-size: 18px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 50px;
+  color: white;
+  background-color: #2d3748;
+  padding: 10px 16px
 }
 
-.ant-modal, .ant-modal-content {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    top: 0;
+.check-more:hover {
+  transition: 0.3s ease;
+  background-color: rgba(45, 55, 72, 0.85);
 }
-.ant-modal-body {
-    height: calc(100vh - 110px);
+
+
+.text-hover-img > img {
+  width: 100%
 }

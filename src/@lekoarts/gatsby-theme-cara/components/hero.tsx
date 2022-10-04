@@ -69,13 +69,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
           <Svg icon="mui" width={6} color="icon_darker" left="60%" top="15%" />
         </UpDown>
         <UpDownWide>
-          <Svg
-            icon="vue"
-            hiddenMobile
-            width={16}
-            left="80%"
-            top="10%"
-          />
+          <Svg icon="vue" hiddenMobile width={16} left="80%" top="10%" />
           <Svg icon="ts" width={12} left="90%" top="50%" />
           <Svg icon="nodejs" width={48} left="70%" top="90%" />
           <Svg icon="html" hiddenMobile width={8} left="30%" top="65%" />
