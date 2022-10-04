@@ -22,7 +22,8 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
   >
     <figure className="text-hover-img">
       <img src={bg} alt="A small fluffy dog" />
-      {children}
+      <div className="project-desc">{children}</div>
+      <div className="overlay" />
     </figure>
   </a>
 )

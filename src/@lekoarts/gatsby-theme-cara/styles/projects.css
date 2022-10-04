@@ -14,7 +14,57 @@
   background-color: rgba(45, 55, 72, 0.85);
 }
 
+figure {
+  position: relative;
+}
 
 .text-hover-img > img {
-  width: 100%
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 15px;
+  filter: brightness(0.9);
+  transition: all 0.2s ease;
+}
+
+.text-hover-img:hover .project-desc {
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.project-desc {
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s linear;
+  transform: scale(.2);
+}
+
+.text-hover-img:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+figcaption h4, figcaption p, .project-desc h4, .project-desc p {
+  color: #fff !important;
 }
